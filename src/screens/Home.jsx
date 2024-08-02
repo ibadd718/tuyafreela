@@ -10,10 +10,33 @@ import Caminho2 from "../assets/Caminho2.png";
 import Caminho3 from "../assets/Caminho3.png";
 import forcard1 from "../assets/forcard1.png";
 import forcard2 from "../assets/forcard2.png";
+import Grupo122 from "../assets/Grupo 122-min.png";
+import Grupo123 from "../assets/Grupo 123-min.png";
+import Grupo124 from "../assets/Grupo 124-min.png";
+import Grupo125 from "../assets/Grupo 125-min.png";
+import Grupo126 from "../assets/Grupo 126-min.png";
+import Grupo139 from "../assets/Grupo 139-min.png";
 import pfp from "../assets/pfp.png";
-
+import { Component } from 'react';
+import ReactDOM from 'react-dom';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const Home = () => {
+  const Card = ({ image, altText }) => (
+    <div className="rounded-lg overflow-hidden">
+      <img src={image} alt={altText} className="w-full h-auto" />
+    </div>
+  );
+
+  const images = [
+    { src: Grupo122, alt: 'Grupo 122' },
+    { src: Grupo123, alt: 'Grupo 123' },
+    { src: Grupo124, alt: 'Grupo 124' },
+    { src: Grupo125, alt: 'Grupo 125' },
+    { src: Grupo126, alt: 'Grupo 126' },
+    { src: Grupo139, alt: 'Grupo 139' },
+  ];
   return (
     <div>
       <div className="relative">
@@ -163,34 +186,71 @@ const Home = () => {
         </div>
       </div>
       <div className="" >
-        <div className="mt-40">
-          <div className="flex  justify-center">
-            <h1 className="text-4xl w-2/5 my-20  text-center">
-              Milhares de pessoas acreditam <div>
-              em nossos <span className="font-bold tracking-wide text-[#d6b8ff]">FREELANCES</span>
+        <div className="mt-5 lg:mt-40">
+          <div className="flex justify-center">
+            <h1 className="text-4xl my-20 text-center">
+              Milhares de pessoas acreditam
+              <div>
+                em nossos
+                <span className="font-bold tracking-wide text-[#d6b8ff]">FREELANCES</span>
               </div>
             </h1>
           </div>
         </div>
 
 
+
         <div className="bg-white w-[91%] relative py-20 px-10 mx-auto">
           <div className="flex justify-center space-x-5 items-center">
             <img className="absolute top-[-40px] right-[40px]" src={forcard1} alt="" />
-            <div>
-              <img src={pfp} alt="" />
-            </div>
-            <div>
-              <p className="text-xl relative">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-              <h1 className="font-bold tracking-wide text-2xl text-[#d6b8ff]">
-                Eduardo Lopes - Realtech Produções
-              </h1>
-              <img className="absolute bottom-10 right-10" src={forcard2} alt="" />
-            </div>
           </div>
+          <Carousel autoPlay="true" axis="horizontal" interval="2000" infiniteLoop="true" showThumbs="true" >
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="w-2/4 md:w-1/4 mb-4 md:mb-0 flex justify-center">
+                <img className="w-full h-auto object-cover" src={pfp} alt="Profile" />
+              </div>
+              <p className="text-xl w-full md:w-4/5">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+              </p>
+            </div>
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="w-2/4 md:w-1/4 mb-4 md:mb-0 flex justify-center">
+                <img className="w-full h-auto object-cover" src={pfp} alt="Profile" />
+              </div>
+              <p className="text-xl w-full md:w-4/5">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+              </p>
+            </div>
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="w-2/4 md:w-1/4 mb-4 md:mb-0 flex justify-center">
+                <img className="w-full h-auto object-cover" src={pfp} alt="Profile" />
+              </div>
+              <p className="text-xl w-full md:w-4/5">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+              </p>
+            </div>
+          </Carousel>
         </div>
       </div>
+      <div className="mt-40">
+        <div className="bg-white w-[91%] relative py-20 px-10 mx-auto">
+          <h1 className="text-4xl w-full mt-5 mb-20 text-center">
+            Não deixe para amanhã, o que pode fazer HOJE!
+            <div>
+              <span className="font-bold tracking-wide text-[#d6b8ff]">
+                Coloque suas ideias em prática
+              </span>
+            </div>
+          </h1>
+          <div className="w-[91%] mx-auto mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+            {images.map((image, index) => (
+              <Card key={index} image={image.src} altText={image.alt} />
+            ))}
+          </div>
+        </div>
 
+
+      </div>
     </div>
   );
 };
