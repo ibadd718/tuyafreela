@@ -35,7 +35,7 @@ const Navbar = () => {
           </Link>
 
         </div>
-        <div className="lg:hidden flex items-center">
+        <div className="lg:hidden text-white flex items-center">
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
       </div>
