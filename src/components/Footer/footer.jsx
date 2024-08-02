@@ -5,18 +5,18 @@ import Logo from "../../assets/Logo.png";
 const Footer = () => {
     return (
         <footer className="bg-[#363636] p-10 text-white">
-            <div className="container px-4 lg:px-8">
+            <div className="container mx-auto px-4 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <aside className="flex flex-col items-center md:items-start">
+                    <aside className="flex flex-col items-start">
                         <img src={Logo} className="w-32 mb-4" alt="Company Logo" />
-                    </aside>
-                    <nav className="flex flex-col">
+                        <nav className="flex flex-col">
                             <Link to="/" className="link link-hover mb-2">Como Funciona?</Link>
                             <Link to="/" className="link link-hover mb-2">Termos de Serviço</Link>
                             <Link to="/" className="link link-hover mb-2">Política de Privacidade</Link>
                             <Link to="/" className="link link-hover">Una-se a Nossa Equipe</Link>
                         </nav>
-                    
+                    </aside>
+                   
                     <nav className="flex flex-col">
                         <h1 className="footer-title text-[#D6B8FF] text-lg mb-4">Para Freelancer</h1>
                         <Link to="/about" className="link link-hover mb-2">Projetos</Link>

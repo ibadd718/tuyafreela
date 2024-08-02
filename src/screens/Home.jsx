@@ -50,7 +50,6 @@ const Home = () => {
           </h1>
         </div>
       </div>
-
       <h1 className="text-center text-3xl md:text-4xl font-semibold mt-12 md:mt-16 px-4">
         Como funciona?
       </h1>
@@ -114,7 +113,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="flex space-x-4 mt-8 justify-center">
+          <div className="flex space-x-4 mt-8  justify-center">
             <button className="bg-[#D6B8FF] font-semibold text-white p-5 text-xl rounded-sm transition-transform transform hover:scale-105 hover:bg-[#B09CFF]">
               PUBLIQUE UM PROJETO
             </button>
@@ -123,67 +122,72 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className="relative flex flex-col w-full md:mt-40 px-4 z-10">
-          {/* Hero2 Image Section (Tablets and Phones) */}
-          <div className="absolute top-0 left-0 right-0 bottom-0 z-0 md:hidden">
-            <img src={Hero2} alt="Hero Image" className="w-full h-auto object-cover" />
-          </div>
-
-          {/* Content Section */}
-          <div className="ml-0 md:ml-10 text-center md:text-left relative z-10">
-            <h1 className="text-2xl md:text-4xl w-full md:w-2/3 mt-8">
-              Torne-se um profissional <div> digital. <span className="font-bold">Torne-se um freelancer.</span></div>
-            </h1>
-            <p className="mt-4 text-sm md:text-base md:w-2/5 ">
-              Você pode melhorar a sua presença na web, vender online, vender nas redes sociais, criar conteúdos que mantenham seus clientes interessados ​​na sua marca e muito mais!
-            </p>
-            <button className="bg-[#D6B8FF] text-white p-3 rounded-md mt-4 text-sm sm:text-base transition-transform transform hover:scale-105 hover:bg-[#B09CFF]">
-              COMEÇE SUA JORNADA!
-            </button>
-
-          </div>
-
-          {/* Hero2 Image Section (Desktop) */}
-          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 hidden xl:block z-0">
-            <img src={Hero2} alt="Hero Image" className="w-[150%] md:w-[180%] h-auto" />
-          </div>
-        </div>
       </div>
-
-
-      <div id="third-container" className="container bg-white py-2 mx-auto px-4 relative z-20 lg:top-40 sm:top-10 mt-10">
-        <h1 className="text-center text-2xl md:text-3xl lg:text-4xl mb-10 font-semibold mt-0 md:mt-10 lg:mt-10">
-          Acompanhe nossos resultados!
-        </h1>
-        {/* Flex container for responsiveness */}
-        <div className="flex flex-col gap-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {/* Image Container */}
-            <div className="flex flex-col items-center text-center">
-              <img src={Caminho1} alt="Step 1" className="w-40 h-40 sm:w-42 sm:h-42 object-fit mb-4" />
-              <h2 className="text-4xl sm:text-6xl font-bold">2.200</h2>
-              <p className="text-gray-600 text-lg">Freelancers</p>
+      <div className="bg-white">
+        <div id="third-container" className="w-full bg-white py-2 mx-auto px-4 relative z-20 lg:top-40 sm:top-10 mt-10">
+          <div className="relative flex flex-col w-full md:mt-0 px-4 z-10">
+            {/* Hero2 Image Section (Tablets and Phones) */}
+            <div className="absolute top-0 left-0 right-0 bottom-0 z-0 md:hidden">
+              <img src={Hero2} alt="Hero Image" className="w-full h-full object-cover" />
             </div>
-            <div className="flex flex-col items-center text-center">
-              <img src={Caminho2} alt="Step 2" className="w-40 h-40 sm:w-42 sm:h-42 object-fit mb-4" />
-              <h2 className="text-4xl sm:text-6xl font-bold">2.200</h2>
-              <p className="text-gray-600 text-lg">Projeto Mensal</p>
+
+            {/* Content Section */}
+            <div className="ml-0 md:ml-10 text-center md:text-left relative z-10">
+              <h1 className="text-2xl md:text-4xl w-full md:w-2/3 mt-8">
+                Torne-se um profissional <div> digital. <span className="font-bold">Torne-se um freelancer.</span></div>
+              </h1>
+              <p className="mt-4 text-sm md:text-base md:w-2/5">
+                Você pode melhorar a sua presença na web, vender online, vender nas redes sociais, criar conteúdos que mantenham seus clientes interessados ​​na sua marca e muito mais!
+              </p>
+              <button className="bg-[#D6B8FF] text-white p-3 rounded-md mt-4 text-sm sm:text-base transition-transform transform hover:scale-105 hover:bg-[#B09CFF]">
+                COMEÇE SUA JORNADA!
+              </button>
             </div>
-            <div className="flex flex-col items-center text-center">
-              <img src={Caminho3} alt="Step 3" className="w-40 h-40 sm:w-42 sm:h-42 object-fit mb-4" />
-              <h2 className="text-4xl sm:text-6xl font-bold">2.200</h2>
-              <p className="text-gray-600 text-lg">Usuários Online</p>
+
+            {/* Hero2 Image Section (Desktop) */}
+            <div id="hero-div" className="absolute right-0 top-1/2 transform -translate-y-1/2 hidden xl:block z-0">
+              <div className="relative">
+                <img id="hero-Img" className="hero-image w-full h-full object-cover" src={Hero2} alt="Hero Image" />
+                <div className="absolute inset-0 w-full bg-gradient-to-l from-transparent to-white w-[120%]"></div>
+              </div>
             </div>
           </div>
-          <div className="flex flex-col pb-10 sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8 justify-center">
-            <button className="bg-[#D6B8FF] text-xl font-semibold  text-white p-5 rounded-sm transition-transform transform hover:scale-105 hover:bg-[#B09CFF]">
-              PUBLIQUE UM PROJETO
-            </button>
-            <button className="bg-[#6C7A89] text-xl font-semibold  text-white p-5 rounded-sm transition-transform transform hover:scale-105 hover:bg-[#5a6a75]">
-              TRABALHE COMO FREELA
-            </button>
+
+          <h1 className="text-center text-2xl md:text-3xl lg:text-4xl mb-10 font-semibold mt-10 md:mt-10 lg:mt-52">
+            Acompanhe nossos resultados!
+          </h1>
+
+          {/* Flex container for responsiveness */}
+          <div className="flex flex-col gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {/* Image Container */}
+              <div className="flex flex-col items-center text-center">
+                <img src={Caminho1} alt="Step 1" className="w-40 h-40 sm:w-42 sm:h-42 object-fit mb-4" />
+                <h2 className="text-4xl sm:text-6xl font-bold">2.200</h2>
+                <p className="text-gray-600 text-lg">Freelancers</p>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <img src={Caminho2} alt="Step 2" className="w-40 h-40 sm:w-42 sm:h-42 object-fit mb-4" />
+                <h2 className="text-4xl sm:text-6xl font-bold">2.200</h2>
+                <p className="text-gray-600 text-lg">Projeto Mensal</p>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <img src={Caminho3} alt="Step 3" className="w-40 h-40 sm:w-42 sm:h-42 object-fit mb-4" />
+                <h2 className="text-4xl sm:text-6xl font-bold">2.200</h2>
+                <p className="text-gray-600 text-lg">Usuários Online</p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8 justify-center">
+              <button className="bg-[#D6B8FF] text-xl font-semibold text-white p-5 rounded-sm transition-transform transform hover:scale-105 hover:bg-[#B09CFF]">
+                PUBLIQUE UM PROJETO
+              </button>
+              <button className="bg-[#6C7A89] text-xl font-semibold text-white p-5 rounded-sm transition-transform transform hover:scale-105 hover:bg-[#5a6a75]">
+                TRABALHE COMO FREELA
+              </button>
+            </div>
           </div>
         </div>
+
       </div>
       <div className="" >
         <div className="mt-5 lg:mt-40">
@@ -204,7 +208,7 @@ const Home = () => {
           <div className="flex justify-center space-x-5 items-center">
             <img className="absolute top-[-40px] right-[40px]" src={forcard1} alt="" />
           </div>
-          <Carousel autoPlay="true" axis="horizontal" interval="2000" infiniteLoop="true" showThumbs="true" >
+          <Carousel autoPlay="true" axis="vertical" verticalSwipe="standard" showIndicators="false" interval="2000" infiniteLoop="true" showThumbs="false" >
             <div className="flex flex-col md:flex-row items-center">
               <div className="w-2/4 md:w-1/4 mb-4 md:mb-0 flex justify-center">
                 <img className="w-full h-auto object-cover" src={pfp} alt="Profile" />
@@ -232,8 +236,8 @@ const Home = () => {
           </Carousel>
         </div>
       </div>
-      <div className="mt-40">
-        <div className="bg-white w-[91%] relative py-20 px-10 mx-auto">
+      <div className="mt-40 bg-white">
+        <div className="w-[91%] relative py-20 px-10 mx-auto">
           <h1 className="text-4xl w-full mt-5 mb-20 text-center">
             Não deixe para amanhã, o que pode fazer HOJE!
             <div>
