@@ -6,7 +6,7 @@ const NewPassword = () => {
     <div className="flex flex-col min-h-screen">
       <div className="flex-grow flex justify-center items-center bg-gray-100">
         <div className="p-8">
-          <h1 className="text-xl w-full font-bold mb-6 text-center">
+          <h1 className="text-2xl w-full font-bold mb-6 text-center">
             Crie sua nova senha!
           </h1>
           <form>

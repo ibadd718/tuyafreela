@@ -17,7 +17,7 @@ import Forget from "../../screens/Forget";
 import EmailVerification from "../../screens/EmailVerification";
 import EmailConfirmation from "../../screens/EmailConfirmation";
 import NewPassword from "../../screens/NewPassword";
-import NotFound from "../../screens/NotFound"; // Import the NotFound component
+import NotFound from "../../screens/NotFound";
 
 const ConditionalFooter = () => {
   const location = useLocation();
