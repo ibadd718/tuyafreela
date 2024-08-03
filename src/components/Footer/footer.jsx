@@ -16,7 +16,7 @@ const Footer = () => {
               <Link to="/terms" className="link link-hover mb-2">
                 Termos de Serviço
               </Link>
-              <Link to="/" className="link link-hover mb-2">
+              <Link to="/privacy&policy " className="link link-hover mb-2">
                 Política de Privacidade
               </Link>
               <Link to="/" className="link link-hover">
