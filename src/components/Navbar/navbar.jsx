@@ -24,16 +24,21 @@ const Navbar = () => {
           </div>
         </div>
         <div className="hidden lg:flex items-center space-x-8 text-[#FFFFFF]">
-          <Link className="hover:text-[#D6B8FF] " to="/como">Como Funciona?</Link>
-          <Link className="hover:text-[#D6B8FF] " to="/cadastre-se">Cadastre-se</Link>
-          <Link className="hover:text-[#D6B8FF] " to="/entrar">Entrar</Link>
+          <Link className="hover:text-[#D6B8FF] " to="/functiona">
+            Como Funciona?
+          </Link>
+          <Link className="hover:text-[#D6B8FF] " to="/cadastre-se">
+            Cadastre-se
+          </Link>
+          <Link className="hover:text-[#D6B8FF] " to="/entrar">
+            Entrar
+          </Link>
           <Link
             to="/"
             className="bg-[#D6B8FF] text-white p-3 rounded-sm transition-transform transform hover:scale-105 hover:bg-[#B09CFF]"
           >
             PUBLIQUE UM PROJETO
           </Link>
-
         </div>
         <div className="lg:hidden text-white flex items-center">
           <Hamburger toggled={isOpen} toggle={setOpen} />

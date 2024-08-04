@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "../../screens/Home";
 import Navbar from "../../components/Navbar/navbar";
-import Como from "../../screens/Como";
 import Contact from "../../screens/Contact";
 import Cada from "../../screens/Cada";
 import Terms from "../../screens/Terms";
@@ -18,6 +17,7 @@ import EmailVerification from "../../screens/EmailVerification";
 import EmailConfirmation from "../../screens/EmailConfirmation";
 import NewPassword from "../../screens/NewPassword";
 import NotFound from "../../screens/NotFound";
+import Functiona from "../../screens/Functiona";
 
 const ConditionalFooter = () => {
   const location = useLocation();
@@ -41,7 +41,6 @@ const Routers = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/como" element={<Como />} />
         <Route path="/faq" element={<Faqs />} />
         <Route path="/privacy&policy" element={<PrivacyPolicy />} />
         <Route path="/login" element={<Login />} />
@@ -49,6 +48,7 @@ const Routers = () => {
         <Route path="/verification" element={<EmailVerification />} />
         <Route path="/confirmation" element={<EmailConfirmation />} />
         <Route path="/forget" element={<Forget />} />
+        <Route path="/functiona" element={<Functiona />} />
         <Route path="/prefilPage" element={<PrefillNo />} />
         <Route path="/freelancerForm" element={<FreelancerForm />} />
         <Route path="/passwordreset" element={<NewPassword />} />

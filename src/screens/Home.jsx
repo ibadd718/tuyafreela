@@ -16,6 +16,7 @@ import retangulo4 from "../assets/Retângulo 41 (2)-min.png";
 import retangulo5 from "../assets/Retângulo 40-min.png";
 import retangulo6 from "../assets/Retângulo 41 (3)-min.png";
 
+
 import pfp from "../assets/pfp.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
