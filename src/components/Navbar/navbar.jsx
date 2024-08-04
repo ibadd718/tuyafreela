@@ -9,14 +9,18 @@ const Navbar = () => {
 
   return (
     <div className="bg-[#363636]">
-      <div className="flex justify-between items-center py-2 px-4 lg:px-10">
-        <div className="flex items-center space-x-10">
+      <div className="flex justify-between items-center py-2 px-4 lg:px-6">
+        {" "}
+        {/* Adjusted padding */}
+        <div className="flex items-center space-x-6">
+          {" "}
+          {/* Reduced space-x */}
           <Link to={"/"}>
             <img className="w-64" src={Logo} alt="Logo" />
           </Link>
           <div className="relative hidden lg:block">
             <input
-              className=" py-3 pl-5 pr-20 w-full border rounded"
+              className="py-3 pl-5 pr-20 w-full border rounded"
               placeholder="Buscar por profissionais"
               type="text"
             />
@@ -24,13 +28,13 @@ const Navbar = () => {
           </div>
         </div>
         <div className="hidden lg:flex items-center space-x-8 text-[#FFFFFF]">
-          <Link className="hover:text-[#D6B8FF] " to="/functiona">
+          <Link className="hover:text-[#D6B8FF]" to="/functiona">
             Como Funciona?
           </Link>
-          <Link className="hover:text-[#D6B8FF] " to="/cadastre-se">
+          <Link className="hover:text-[#D6B8FF]" to="/cadastre-se">
             Cadastre-se
           </Link>
-          <Link className="hover:text-[#D6B8FF] " to="/entrar">
+          <Link className="hover:text-[#D6B8FF]" to="/entrar">
             Entrar
           </Link>
           <Link
@@ -52,10 +56,10 @@ const Navbar = () => {
               placeholder="Buscar por profissionais"
               type="text"
             />
-            <Link to="/como" className=" hover:text-[#D6B8FF]  text-white">
+            <Link to="/como" className="hover:text-[#D6B8FF] text-white">
               Como Funciona?
             </Link>
-            <Link to="/cada" className="hover:text-[#D6B8FF]  text-white">
+            <Link to="/cada" className="hover:text-[#D6B8FF] text-white">
               Cadastre-se
             </Link>
             <Link to="/entrar" className="hover:text-[#D6B8FF] text-white">

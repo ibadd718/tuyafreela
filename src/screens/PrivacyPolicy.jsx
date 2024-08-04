@@ -44,7 +44,7 @@ const contentData = [
 
 const PrivacyPolicy = () => {
   return (
-    <div className="relative w-full h-auto">
+    <div className="relative bg-white w-full h-auto">
       <div className="relative w-full h-60 md:h-96 overflow-hidden bg-gradient-to-r from-[#532073] to-[#aa5dcd]">
         <img
           src={contactShape}
@@ -57,14 +57,12 @@ const PrivacyPolicy = () => {
         src={circle}
         alt=""
       />
-      {/* Heading above the scrollable content */}
-      {/* Scrollable content area */}
       <div className="flex justify-center">
         <div
           id="scroll-div-parent"
-          className="absolute bg-white w-full md:w-3/4 top-32 md:top-40 "
+          className="absolute bg-white shadow-xl w-full md:w-3/4 top-32 md:top-40 "
         >
-          <h1 className="text-4xl relative p-20 text-center ">
+          <h1 className="text-4xl relative p-20 text-center">
             Política de privacidade
           </h1>
           <img
@@ -87,7 +85,7 @@ const PrivacyPolicy = () => {
           </div>
         </div>
       </div>
-      <div className="h-screen mt-10"></div>
+      <div className="h-screen  mt-10"></div>
     </div>
   );
 };

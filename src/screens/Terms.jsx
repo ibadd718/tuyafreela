@@ -49,7 +49,7 @@ const Terms = () => {
         src={circle}
         alt=""
       />
-      <div className="flex flex-col-reverse md:flex-row items-center p-4">
+      <div className="flex flex-col-reverse ml-0 md:ml-5  md:flex-row items-center p-4">
         <div className="flex md:w-full py-8">
           <div className="mx-auto p-4">
             <div className="space-y-4">
@@ -67,7 +67,7 @@ const Terms = () => {
                       </span>
                     </h2>
                   </div>
-                  <p className="text-gray-700">{faq.answer}</p>
+                  <p className="text-gray-700 w-full md:w-4/5">{faq.answer}</p>
                 </div>
               ))}
             </div>

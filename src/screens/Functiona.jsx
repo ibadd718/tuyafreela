@@ -24,6 +24,25 @@ import curve4 from "../assets/curve4.png";
 import { Carousel } from "react-responsive-carousel";
 
 const Functiona = () => {
+  const Card = ({ image, altText, heading }) => (
+    <div className=" overflow-hidden text-center flex flex-col items-center justify-center">
+      <img src={image} alt={altText} className="w-44 h-44 object-fit" />
+      <h2 className="mt-4 mb-4 text-xl">{heading}</h2>
+    </div>
+  );
+
+  const images = [
+    { src: moreMin, alt: "Grupo 123", heading: "Renove seu site" },
+    { src: seoAndWebMin, alt: "Grupo 124", heading: "Lance seu App Mobile" },
+    {
+      src: quickMobileOptionsMin,
+      alt: "Grupo 125",
+      heading: "Crie sua Id. Visual",
+    },
+    { src: vectorMin, alt: "Grupo 122", heading: "Tradutores/Escritores" },
+    { src: newsMin, alt: "Grupo 139", heading: "Marketing e Vendas" },
+    { src: aimMin, alt: "Grupo 126", heading: "E muito mais!" },
+  ];
   return (
     <div className="relative w-full bg-white h-auto">
       <div className="relative w-full h-72 md:h-[600px] overflow-hidden bg-gradient-to-r from-[#532073] to-[#aa5dcd]">
@@ -289,36 +308,16 @@ const Functiona = () => {
             Coloque suas ideias em prática
           </h1>
         </div>
-        <div className="flex flex-wrap justify-center gap-4">
-          <div className="flex flex-col items-center">
-            <img src={seoAndWebMin} alt="SEO and Web" className="w-32 h-32" />
-            <h3 className="mt-2 text-center">SEO and Web</h3>
-          </div>
-          <div className="w-2/4">
-            <div className="flex flex-col items-center">
-              <img
-                src={quickMobileOptionsMin}
-                alt="Quick Mobile Options"
-                className="w-32 h-32"
+        <div className="flex justify-center mt-10 mb-20 md:mt-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-28">
+            {images.map((image, index) => (
+              <Card
+                key={index}
+                image={image.src}
+                altText={image.alt}
+                heading={image.heading}
               />
-              <h3 className="mt-2 text-center">Quick Mobile Options</h3>
-            </div>
-            <div className="flex flex-col items-center">
-              <img src={vectorMin} alt="Vector" className="w-32 h-32" />
-              <h3 className="mt-2 text-center">Vector</h3>
-            </div>
-            <div className="flex flex-col items-center">
-              <img src={newsMin} alt="News" className="w-32 h-32" />
-              <h3 className="mt-2 text-center">News</h3>
-            </div>
-            <div className="flex flex-col items-center">
-              <img src={aimMin} alt="Aim" className="w-32 h-32" />
-              <h3 className="mt-2 text-center">Aim</h3>
-            </div>
-            <div className="flex flex-col items-center">
-              <img src={moreMin} alt="More" className="w-32 h-32" />
-              <h3 className="mt-2 text-center">More</h3>
-            </div>
+            ))}
           </div>
         </div>
       </div>
