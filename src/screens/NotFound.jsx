@@ -1,7 +1,7 @@
 // src/pages/NotFound.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Footer2 from '../components/Footer/footer2'; // Assuming you want to include the footer
+import React from "react";
+import { Link } from "react-router-dom";
+import Footer2 from "../components/Footer/footer2"; // Assuming you want to include the footer
 
 const NotFound = () => {
   return (
@@ -13,7 +13,6 @@ const NotFound = () => {
           Go back to Home
         </Link>
       </div>
-      <Footer2 />
     </div>
   );
 };

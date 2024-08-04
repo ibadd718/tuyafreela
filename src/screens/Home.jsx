@@ -16,7 +16,6 @@ import retangulo4 from "../assets/Retângulo 41 (2)-min.png";
 import retangulo5 from "../assets/Retângulo 40-min.png";
 import retangulo6 from "../assets/Retângulo 41 (3)-min.png";
 
-
 import pfp from "../assets/pfp.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
@@ -24,7 +23,7 @@ import { Carousel } from "react-responsive-carousel";
 const Home = () => {
   const Card = ({ image, altText, heading }) => (
     <div className="bg-[#F6F6F6] overflow-hidden text-center">
-      <img src={image} alt={altText} className="w-full h-auto" />
+      <img src={image} alt={altText} className="" />
       <h2 className="mt-4 mb-4 text-xl ">{heading}</h2>
     </div>
   );
@@ -116,11 +115,11 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="flex space-x-4 mt-8  justify-center">
-            <button className="bg-[#D6B8FF] font-semibold text-white p-5 text-xl rounded-sm transition-transform transform hover:scale-105 hover:bg-[#B09CFF]">
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8 justify-center">
+            <button className="bg-[#D6B8FF] text-xl font-semibold text-white p-5 rounded-sm transition-transform transform hover:scale-105 hover:bg-[#B09CFF]">
               PUBLIQUE UM PROJETO
             </button>
-            <button className="bg-[#6C7A89] font-semibold text-white p-5 text-xl rounded-sm transition-transform transform hover:scale-105 hover:bg-[#5a6a75]">
+            <button className="bg-[#6C7A89] text-xl font-semibold text-white p-5 rounded-sm transition-transform transform hover:scale-105 hover:bg-[#5a6a75]">
               TRABALHE COMO FREELA
             </button>
           </div>
@@ -131,18 +130,16 @@ const Home = () => {
           id="third-container"
           className="w-full bg-white py-2 mx-auto px-4 relative z-20 lg:top-40 sm:top-10 mt-10"
         >
-          <div className="relative flex flex-col w-full md:mt-0 px-4 z-10">
-            {/* Hero2 Image Section (Tablets and Phones) */}
-            <div className="absolute top-0 left-0 right-0 bottom-0 z-0 md:hidden">
-              <img
-                src={Hero2}
-                alt="Hero Image"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Content Section */}
+          <div className="relative flex flex-col w-full md:mt-10 px-4 z-10">
             <div className="ml-0 md:ml-10 text-center md:text-left relative z-10">
+              {/* Hero2 Image Section (Tablets and Phones) */}
+              <div className="relative right-1/4 z-0 block xl:hidden">
+                <img
+                  src={Hero2}
+                  alt="Hero Image"
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <h1 className="text-2xl md:text-4xl w-full md:w-2/3 mt-8">
                 Torne-se um profissional{" "}
                 <div>
@@ -228,10 +225,9 @@ const Home = () => {
       <div className="">
         <div className="mt-5 lg:mt-40">
           <div className="flex justify-center">
-            <h1 className="text-4xl my-20 text-center">
-              Milhares de pessoas acreditam
+            <h1 className="text-4xl mt-10 mb-16  text-center">
+              Milhares de pessoas acreditam em nossos
               <div>
-                em nossos
                 <span className="font-bold tracking-wide text-[#d6b8ff]">
                   FREELANCES
                 </span>
@@ -250,7 +246,7 @@ const Home = () => {
           </div>
           <Carousel
             autoPlay="true"
-            axis="vertical"
+            axis="horizontal"
             verticalSwipe="standard"
             showIndicators="false"
             interval="2000"
@@ -258,62 +254,80 @@ const Home = () => {
             showThumbs="false"
           >
             <div className="flex flex-col md:flex-row items-center">
-              <div className="w-2/4 md:w-1/4 mb-4 md:mb-0 flex justify-center">
+              <div className="w-2/4 md:w-full mb-4 md:mb-0 flex justify-center">
                 <img
                   className="w-full h-auto object-cover"
                   src={pfp}
                   alt="Profile"
                 />
               </div>
-              <p className="text-xl w-full md:w-4/5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
-              </p>
+              <div className="p-5 md:p-10 ">
+                <p className="text-xl md:text-start w-[300px] md:w-full">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged.
+                </p>
+                <div className="mt:4 md:mt-1 text-start font-semibold text-xl text-[#D6B8FF]">
+                  Eduardo Lopes - Realtech Produções
+                </div>
+              </div>
             </div>
             <div className="flex flex-col md:flex-row items-center">
-              <div className="w-2/4 md:w-1/4 mb-4 md:mb-0 flex justify-center">
+              <div className="w-2/4 md:w-full mb-4 md:mb-0 flex justify-center">
                 <img
                   className="w-full h-auto object-cover"
                   src={pfp}
                   alt="Profile"
                 />
               </div>
-              <p className="text-xl w-full md:w-4/5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
-              </p>
+              <div className="p-5 md:p-10 ">
+                <p className="text-xl md:text-start w-[300px] md:w-full">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged.
+                </p>
+                <div className="mt:4 md:mt-1 text-start font-semibold text-xl text-[#D6B8FF]">
+                  Eduardo Lopes - Realtech Produções
+                </div>
+              </div>
             </div>
             <div className="flex flex-col md:flex-row items-center">
-              <div className="w-2/4 md:w-1/4 mb-4 md:mb-0 flex justify-center">
+              <div className="w-2/4 md:w-full mb-4 md:mb-0 flex justify-center">
                 <img
                   className="w-full h-auto object-cover"
                   src={pfp}
                   alt="Profile"
                 />
               </div>
-              <p className="text-xl w-full md:w-4/5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
-              </p>
+              <div className="p-5 md:p-10 ">
+                <p className="text-xl md:text-start w-[300px] md:w-full">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged.
+                </p>
+                <div className="mt:4 md:mt-1 text-start font-semibold text-xl text-[#D6B8FF]">
+                  Eduardo Lopes - Realtech Produções
+                </div>
+              </div>
             </div>
           </Carousel>
         </div>
       </div>
       <div className="mt-20 bg-white">
-        <div className="w-[91%] relative py-20 px-10 mx-auto">
-          <h1 className="text-4xl w-full mt-5 mb-20 text-center">
+        <div className=" py-20 px-10 ">
+          <h1 className="text-4xl mt-5 mb-20 text-center">
             Não deixe para amanhã, o que pode fazer HOJE!
             <div>
               <span className="font-bold tracking-wide text-[#d6b8ff]">
@@ -321,7 +335,7 @@ const Home = () => {
               </span>
             </div>
           </h1>
-          <div className="w-[91%] mx-auto mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+          <div className="w-[100%] mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 ">
             {images.map((image, index) => (
               <Card
                 key={index}

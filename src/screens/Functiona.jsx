@@ -256,7 +256,7 @@ const Functiona = () => {
                 Eduardo Lopes - Realtech Produções
               </p>
             </div>
-            <div className="flex p-4 flex-col md:flex-col bg-white items-center">
+            <div className="flex p-4 flex-col md:flex-col justify-center bg-white items-center">
               <div className="w-1/4 md:w-1/6 mb-4 md:mb-0 flex justify-center">
                 <img
                   className="w-full h-auto object-cover"
@@ -264,7 +264,7 @@ const Functiona = () => {
                   alt="Profile"
                 />
               </div>
-              <p className="text-xl px-4 w-full text-start md:w-2/5">
+              <p className="text-xl  mt-4 px-4 w-full text-start md:w-2/5">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
@@ -272,7 +272,7 @@ const Functiona = () => {
                 survived not only five centuries, but also the leap into
                 electronic typesetting, remaining essentially unchanged.
               </p>
-              <p className="font-semibold text-[#D6B8FF]">
+              <p className="font-semibold mt-2 text-[#D6B8FF]">
                 Eduardo Lopes - Realtech Produções
               </p>
             </div>
@@ -295,30 +295,30 @@ const Functiona = () => {
             <h3 className="mt-2 text-center">SEO and Web</h3>
           </div>
           <div className="w-2/4">
-          <div className="flex flex-col items-center">
-            <img
-              src={quickMobileOptionsMin}
-              alt="Quick Mobile Options"
-              className="w-32 h-32"
-            />
-            <h3 className="mt-2 text-center">Quick Mobile Options</h3>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src={vectorMin} alt="Vector" className="w-32 h-32" />
-            <h3 className="mt-2 text-center">Vector</h3>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src={newsMin} alt="News" className="w-32 h-32" />
-            <h3 className="mt-2 text-center">News</h3>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src={aimMin} alt="Aim" className="w-32 h-32" />
-            <h3 className="mt-2 text-center">Aim</h3>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src={moreMin} alt="More" className="w-32 h-32" />
-            <h3 className="mt-2 text-center">More</h3>
-          </div>
+            <div className="flex flex-col items-center">
+              <img
+                src={quickMobileOptionsMin}
+                alt="Quick Mobile Options"
+                className="w-32 h-32"
+              />
+              <h3 className="mt-2 text-center">Quick Mobile Options</h3>
+            </div>
+            <div className="flex flex-col items-center">
+              <img src={vectorMin} alt="Vector" className="w-32 h-32" />
+              <h3 className="mt-2 text-center">Vector</h3>
+            </div>
+            <div className="flex flex-col items-center">
+              <img src={newsMin} alt="News" className="w-32 h-32" />
+              <h3 className="mt-2 text-center">News</h3>
+            </div>
+            <div className="flex flex-col items-center">
+              <img src={aimMin} alt="Aim" className="w-32 h-32" />
+              <h3 className="mt-2 text-center">Aim</h3>
+            </div>
+            <div className="flex flex-col items-center">
+              <img src={moreMin} alt="More" className="w-32 h-32" />
+              <h3 className="mt-2 text-center">More</h3>
+            </div>
           </div>
         </div>
       </div>
