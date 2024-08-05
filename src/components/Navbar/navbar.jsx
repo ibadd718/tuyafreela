@@ -7,8 +7,9 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const location = useLocation();
-  
+
   const isActive = (path) => location.pathname === path;
 
   return (
@@ -36,84 +37,85 @@ const Navbar = () => {
           </Link>
           <Link
             className={`hover:text-[#D6B8FF] ${isActive("/cadastre-se") ? "text-[#D6B8FF]"  : ""}`}
-            to="/cadastre-se"
+            to="/signup"
           >
             Cadastre-se
           </Link>
-          <div className="dropdown ">
-            <div tabIndex={0} role="button" className="flex items-center border-none m-1">
-              My Profile <RiArrowDropDownLine size={40} />
-            </div>
-            <ul
-              tabIndex={0}
-              id="dropdown"
-              className="dropdown-content relative left-[-40px] z-50 flex  flex-col bg-base-100 rounded-box text-black w-52 p-2 shadow"
+          <div className="relative">
+            <button
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className="flex items-center border-none bg-transparent text-white focus:outline-none"
             >
-              <div className="mb-2 ">
-                <Link
-                  className={`block text-center hover:text-[#D6B8FF] ${isActive("/login") ? "text-[#D6B8FF]"  : ""}`}
-                  to="/login"
-                >
-                  Login
-                </Link>
-              </div>
-              <div className="mb-2 ">
-                <Link
-                  className={`block text-center hover:text-[#D6B8FF] ${isActive("/signup") ? "text-[#D6B8FF]"  : ""}`}
-                  to="/signup"
-                >
-                  Signup
-                </Link>
-              </div>
-              <div className="mb-2 ">
-                <Link
-                  className={`block text-center hover:text-[#D6B8FF] ${isActive("/prefilPage") ? "text-[#D6B8FF]"  : ""}`}
-                  to="/prefilPage"
-                >
-                  Prefill Page
-                </Link>
-              </div>
-              <div className="mb-2 ">
-                <Link
-                  className={`block text-center hover:text-[#D6B8FF] ${isActive("/forget") ? "text-[#D6B8FF]"  : ""}`}
-                  to="/forget"
-                >
-                  Forgot Password
-                </Link>
-              </div>
-              <div className="mb-2 ">
-                <Link
-                  className={`block text-center hover:text-[#D6B8FF] ${isActive("/freelancerForm") ? "text-[#D6B8FF]"  : ""}`}
-                  to="/freelancerForm"
-                >
-                  Freelancer Form
-                </Link>
-              </div>
-              <div className="mb-2 ">
-                <Link
-                  className={`block text-center hover:text-[#D6B8FF] ${isActive("/passwordreset") ? "text-[#D6B8FF]"  : ""}`}
-                  to="/passwordreset"
-                >
-                  Reset Password
-                </Link>
-              </div>
-              <div className="mb-2 ">
-                <Link
-                  className={`block text-center hover:text-[#D6B8FF] ${isActive("/verification") ? "text-[#D6B8FF]"  : ""}`}
-                  to="/verification"
-                >
-                  Email Verification
-                </Link>
-              </div>
-              <div className="mb-2 ">
-                <Link
-                  className={`block text-center hover:text-[#D6B8FF] ${isActive("/confirmation") ? "text-[#D6B8FF]"  : ""}`}
-                  to="/confirmation"
-                >
-                  Email Confirmation
-                </Link>
-              </div>
-            </ul>
+              My Profile <RiArrowDropDownLine size={40} />
+            </button>
+            {dropdownOpen && (
+              <ul className="absolute right-0 mt-2 bg-base-100 rounded-box text-black w-52 p-2 shadow z-50">
+                <li className="mb-2">
+                  <Link
+                    className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/login") ? "text-[#D6B8FF]"  : ""}`}
+                    to="/login"
+                  >
+                    Login
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link
+                    className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/signup") ? "text-[#D6B8FF]"  : ""}`}
+                    to="/signup"
+                  >
+                    Signup
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link
+                    className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/prefilPage") ? "text-[#D6B8FF]"  : ""}`}
+                    to="/prefilPage"
+                  >
+                    Prefill Page
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link
+                    className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/forget") ? "text-[#D6B8FF]"  : ""}`}
+                    to="/forget"
+                  >
+                    Forgot Password
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link
+                    className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/freelancerForm") ? "text-[#D6B8FF]"  : ""}`}
+                    to="/freelancerForm"
+                  >
+                    Freelancer Form
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link
+                    className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/passwordreset") ? "text-[#D6B8FF]"  : ""}`}
+                    to="/passwordreset"
+                  >
+                    Reset Password
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link
+                    className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/verification") ? "text-[#D6B8FF]"  : ""}`}
+                    to="/verification"
+                  >
+                    Email Verification
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link
+                    className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/confirmation") ? "text-[#D6B8FF]"  : ""}`}
+                    to="/confirmation"
+                  >
+                    Email Confirmation
+                  </Link>
+                </li>
+              </ul>
+            )}
           </div>
           <Link
             to="/"
@@ -147,11 +149,86 @@ const Navbar = () => {
               Cadastre-se
             </Link>
             <Link
-              to="/entrar"
+              to="/signup"
               className={`hover:text-[#D6B8FF] text-white ${isActive("/entrar") ? "text-[#D6B8FF]" : ""}`}
             >
               Entrar
             </Link>
+
+            <button
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className="flex items-center border-none bg-transparent text-white mt-4"
+            >
+              My Profile <RiArrowDropDownLine size={30} />
+            </button>
+            {dropdownOpen && (
+              <ul className="mt-2 bg-base-100 rounded-box text-black w-full p-2 shadow">
+                <li className="mb-2">
+                  <Link
+                    className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/login") ? "text-[#D6B8FF]"  : ""}`}
+                    to="/login"
+                  >
+                    Login
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link
+                    className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/signup") ? "text-[#D6B8FF]"  : ""}`}
+                    to="/signup"
+                  >
+                    Signup
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link
+                    className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/prefilPage") ? "text-[#D6B8FF]"  : ""}`}
+                    to="/prefilPage"
+                  >
+                    Prefill Page
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link
+                    className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/forget") ? "text-[#D6B8FF]"  : ""}`}
+                    to="/forget"
+                  >
+                    Forgot Password
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link
+                    className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/freelancerForm") ? "text-[#D6B8FF]"  : ""}`}
+                    to="/freelancerForm"
+                  >
+                    Freelancer Form
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link
+                    className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/passwordreset") ? "text-[#D6B8FF]"  : ""}`}
+                    to="/passwordreset"
+                  >
+                    Reset Password
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link
+                    className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/verification") ? "text-[#D6B8FF]"  : ""}`}
+                    to="/verification"
+                  >
+                    Email Verification
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link
+                    className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/confirmation") ? "text-[#D6B8FF]"  : ""}`}
+                    to="/confirmation"
+                  >
+                    Email Confirmation
+                  </Link>
+                </li>
+              </ul>
+            )}
             <Link
               className="bg-[#D6B8FF] text-white p-3 rounded-sm mt-4 text-sm sm:text-base transition-transform transform hover:scale-105 hover:bg-[#B09CFF]"
               to="/"

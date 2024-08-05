@@ -371,31 +371,27 @@ const Functiona = () => {
             interval={2000}
             infiniteLoop={true}
             showThumbs={false}
-            // Use a responsive number of slides to show
-            showArrows={true} // Optional: Add arrows for navigation
+            showArrows={true} 
           >
-            {/* Create slides dynamically based on the array */}
             {arr.map((item, itemIndex) => (
-                  <div
-                    key={itemIndex}
-                    className="flex p-4 flex-col my-10 rounded-lg bg-white items-center w-full sm:w-1/2 md:w-1/3"
-                  >
-                    <div className="w-3/4 mb-4 flex justify-center">
-                      <img
-                        className="w-full h-auto object-cover"
-                        src={pfp} // Replace with item.image if images vary
-                        alt="Profile"
-                      />
-                    </div>
-                    <p className="text-xl px-4 text-center">
-                      {item.paragraph}
-                    </p>
-                    <p className="font-semibold text-[#D6B8FF]">
-                      {item.heading}
-                    </p>
-                  </div>
-            
-             
+              <div
+                key={itemIndex}
+                className="flex p-4 flex-col my-10 rounded-lg bg-white items-center w-full sm:w-1/2 md:w-1/3"
+              >
+                <div className="w-3/4 mb-4 flex justify-center">
+                  <img
+                    className="w-full h-auto object-cover"
+                    src={pfp} 
+                    alt="Profile"
+                  />
+                </div>
+                <p className="text-xl px-4 text-center">
+                  {item.paragraph}
+                </p>
+                <p className="font-semibold text-[#D6B8FF]">
+                  {item.heading}
+                </p>
+              </div>
             ))}
           </Carousel>
         </div>
