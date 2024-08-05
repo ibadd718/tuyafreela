@@ -115,7 +115,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8 justify-center">
+          <div className="flex mb-12 flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8 justify-center">
             <button className="bg-[#D6B8FF] text-xl font-semibold text-white p-5 rounded-sm transition-transform transform hover:scale-105 hover:bg-[#B09CFF]">
               PUBLIQUE UM PROJETO
             </button>
@@ -128,9 +128,9 @@ const Home = () => {
       <div className="bg-white">
         <div
           id="third-container"
-          className="w-full bg-white py-2 mx-auto px-4 relative z-20 lg:top-40 sm:top-10 mt-10"
+          className="w-full bg-white py-2 mx-auto  relative z-20 lg:top-40 sm:top-10 mt-10"
         >
-          <div className="relative flex flex-col w-full md:mt-10 px-4 z-10">
+          <div className="relative flex flex-col w-full md:mt-10 z-10">
             <div className="ml-0 md:ml-10 text-center md:text-left relative z-10">
               {/* Hero2 Image Section (Tablets and Phones) */}
               <div className="relative right-1/4 z-0 block xl:hidden">

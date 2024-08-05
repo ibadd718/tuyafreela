@@ -31,5 +31,8 @@ body {
 }
 .carousel .control-dots .dot{
 
-  background-color: black;
+  background-color: #a66ff6;
+}
+#dropdown{
+  z-index: 9999;
 }
