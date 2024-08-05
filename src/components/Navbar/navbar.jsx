@@ -36,7 +36,7 @@ const Navbar = () => {
             Como Funciona?
           </Link>
           <Link
-            className={`hover:text-[#D6B8FF] ${isActive("/cadastre-se") ? "text-[#D6B8FF]"  : ""}`}
+            className={`hover:text-[#D6B8FF] ${isActive("/signup") ? "text-[#D6B8FF]"  : ""}`}
             to="/signup"
           >
             Cadastre-se
@@ -63,7 +63,7 @@ const Navbar = () => {
                     className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/signup") ? "text-[#D6B8FF]"  : ""}`}
                     to="/signup"
                   >
-                    Signup
+                    Cadastre-se
                   </Link>
                 </li>
                 <li className="mb-2">
@@ -176,7 +176,7 @@ const Navbar = () => {
                     className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/signup") ? "text-[#D6B8FF]"  : ""}`}
                     to="/signup"
                   >
-                    Signup
+                    Cadastre-se
                   </Link>
                 </li>
                 <li className="mb-2">

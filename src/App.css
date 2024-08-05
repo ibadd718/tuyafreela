@@ -36,3 +36,6 @@ body {
 #dropdown{
   z-index: 9999;
 }
+.control-arrow{
+  display: none;
+}

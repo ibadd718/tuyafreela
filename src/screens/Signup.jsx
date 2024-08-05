@@ -8,7 +8,7 @@ const Signup = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <div className="flex-grow">
-        <div className="flex justify-center items-center mt-10 bg-gray-100">
+        <div className="flex justify-center items-center mt-10 md:mt-28 bg-gray-100">
           <div className="p-8 w-96">
             <h1 className="text-2xl mb-6 text-center">
               Bem-vindo ao <span className="font-bold">TugaFreela</span>
