@@ -3,7 +3,7 @@ import Logo from "../../assets/Logo.png";
 import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { Squash as Hamburger } from "hamburger-react";
-
+import { RiArrowDropDownLine } from "react-icons/ri";
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
 
@@ -28,15 +28,87 @@ const Navbar = () => {
           </div>
         </div>
         <div className="hidden lg:flex items-center space-x-8 text-[#FFFFFF]">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn m-1">Click < RiArrowDropDownLine size={40} />
+            </div>
+            <ul tabIndex={0} className="dropdown-content relative z-50	 menu bg-base-100 rounded-box z-[1] text-black w-52 p-2 shadow">
+              <Link className="hover:text-[#D6B8FF]" to="/">
+                Home
+              </Link>
+
+              <Link className="hover:text-[#D6B8FF]" to="/faq">
+                FAQ
+              </Link>
+
+              <Link className="hover:text-[#D6B8FF]" to="/privacy&policy">
+                Privacy Policy
+              </Link>
+
+              <Link className="hover:text-[#D6B8FF]" to="/login">
+                Login
+              </Link>
+
+              <Link className="hover:text-[#D6B8FF]" to="/signup">
+                Signup
+              </Link>
+
+              <Link className="hover:text-[#D6B8FF]" to="/verification">
+                Email Verification
+              </Link>
+
+              <Link className="hover:text-[#D6B8FF]" to="/confirmation">
+                Email Confirmation
+              </Link>
+
+              <Link className="hover:text-[#D6B8FF]" to="/forget">
+                Forgot Password
+              </Link>
+
+              <Link className="hover:text-[#D6B8FF]" to="/functiona">
+                Como Funciona?
+              </Link>
+
+              <Link className="hover:text-[#D6B8FF]" to="/prefilPage">
+                Prefill Page
+              </Link>
+
+              <Link className="hover:text-[#D6B8FF]" to="/freelancerForm">
+                Freelancer Form
+              </Link>
+
+              <Link className="hover:text-[#D6B8FF]" to="/passwordreset">
+                Reset Password
+              </Link>
+
+              <Link className="hover:text-[#D6B8FF]" to="/terms">
+                Terms and Conditions
+              </Link>
+
+              <Link className="hover:text-[#D6B8FF]" to="/contact">
+                Contact
+              </Link>
+
+              <Link className="hover:text-[#D6B8FF]" to="/cada">
+                Cada
+              </Link>
+
+              <Link className="hover:text-[#D6B8FF]" to="/entar">
+                Entrar
+              </Link>
+
+              <Link className="hover:text-[#D6B8FF]" to="*">
+                Not Found
+              </Link>
+
+            </ul>
+          </div>
           <Link className="hover:text-[#D6B8FF]" to="/functiona">
             Como Funciona?
           </Link>
           <Link className="hover:text-[#D6B8FF]" to="/cadastre-se">
             Cadastre-se
           </Link>
-          <Link className="hover:text-[#D6B8FF]" to="/entrar">
-            Entrar
-          </Link>
+          
           <Link
             to="/"
             className="bg-[#D6B8FF] text-white p-3 rounded-sm transition-transform transform hover:scale-105 hover:bg-[#B09CFF]"

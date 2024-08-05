@@ -24,6 +24,98 @@ import curve4 from "../assets/curve4.png";
 import { Carousel } from "react-responsive-carousel";
 
 const Functiona = () => {
+  let arr = [
+    {
+      paragraph: `  Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.`,
+      heading: "Eduardo Lopes - Realtech Produções"
+    },
+    {
+      paragraph: `  Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.`,
+      heading: "Eduardo Lopes - Realtech Produções"
+    },
+    {
+      paragraph: `  Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.`,
+      heading: "Eduardo Lopes - Realtech Produções"
+    },
+    {
+      paragraph: `  Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.`,
+      heading: "Eduardo Lopes - Realtech Produções"
+    },
+    {
+      paragraph: `  Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.`,
+      heading: "Eduardo Lopes - Realtech Produções"
+    },
+    {
+      paragraph: `  Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.`,
+      heading: "Eduardo Lopes - Realtech Produções"
+    },
+    {
+      paragraph: `  Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.`,
+      heading: "Eduardo Lopes - Realtech Produções"
+    },
+    {
+      paragraph: `  Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.`,
+      heading: "Eduardo Lopes - Realtech Produções"
+    },
+    {
+      paragraph: `  Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.`,
+      heading: "Eduardo Lopes - Realtech Produções"
+    },
+    {
+      paragraph: `  Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.`,
+      heading: "Eduardo Lopes - Realtech Produções"
+    },
+  ]
   const Card = ({ image, altText, heading }) => (
     <div className=" overflow-hidden text-center flex flex-col items-center justify-center">
       <img src={image} alt={altText} className="w-44 h-44 object-fit" />
@@ -225,80 +317,92 @@ const Functiona = () => {
           </h1>
         </div>
 
-        <div className="">
+        <div className="hidden md:block">
           <Carousel
-            autoPlay="true"
+            autoPlay={true}
             axis="horizontal"
             verticalSwipe="standard"
-            showIndicators="false"
-            interval="2000"
-            infiniteLoop="true"
-            showThumbs="false"
+            showIndicators={false}
+            interval={2000}
+            infiniteLoop={true}
+            showThumbs={false}
           >
-            <div className="flex p-4 flex-col md:flex-col bg-white items-center">
-              <div className="w-1/4 md:w-1/6 mb-4 md:mb-0 flex justify-center">
-                <img
-                  className="w-full h-auto object-cover"
-                  src={pfp}
-                  alt="Profile"
-                />
+            {/* Create slides dynamically based on the array */}
+            {arr.reduce((slides, item, index) => {
+              // Add a new slide every 3 items
+              if (index % 3 === 0) {
+                slides.push([]);
+              }
+              // Add the item to the current slide
+              slides[slides.length - 1].push(item);
+              return slides;
+            }, []).map((slideItems, slideIndex) => (
+              <div key={slideIndex} className="flex gap-10 md:gap-14">
+                {slideItems.map((item, itemIndex) => (
+                  <div key={itemIndex} className="flex p-4 flex-col my-5 rounded-lg bg-white items-center w-full md:w-1/3">
+                    <div className="w-3/4 mb-4 flex justify-center">
+                      <img
+                        className="w-full h-auto object-cover"
+                        src={pfp} // Replace with item.image if images vary
+                        alt="Profile"
+                      />
+                    </div>
+                    <p className="text-xl px-4 text-center">
+                      {item.paragraph}
+                    </p>
+                    <p className="font-semibold text-[#D6B8FF]">
+                      {item.heading}
+                    </p>
+                  </div>
+                ))}
               </div>
-              <p className="text-xl px-4 w-full text-start md:w-2/5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
-              </p>
-              <p className="font-semibold text-[#D6B8FF]">
-                Eduardo Lopes - Realtech Produções
-              </p>
-            </div>
-            <div className="flex p-4 flex-col md:flex-col bg-white items-center">
-              <div className="w-1/4 md:w-1/6 mb-4 md:mb-0 flex justify-center">
-                <img
-                  className="w-full h-auto object-cover"
-                  src={pfp}
-                  alt="Profile"
-                />
-              </div>
-              <p className="text-xl px-4 w-full text-start md:w-2/5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
-              </p>
-              <p className="font-semibold text-[#D6B8FF]">
-                Eduardo Lopes - Realtech Produções
-              </p>
-            </div>
-            <div className="flex p-4 flex-col md:flex-col justify-center bg-white items-center">
-              <div className="w-1/4 md:w-1/6 mb-4 md:mb-0 flex justify-center">
-                <img
-                  className="w-full h-auto object-cover"
-                  src={pfp}
-                  alt="Profile"
-                />
-              </div>
-              <p className="text-xl  mt-4 px-4 w-full text-start md:w-2/5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
-              </p>
-              <p className="font-semibold mt-2 text-[#D6B8FF]">
-                Eduardo Lopes - Realtech Produções
-              </p>
-            </div>
+            ))}
+          </Carousel>
+
+        </div>
+
+
+        <div className="block md:hidden">
+          <Carousel
+            autoPlay={true}
+            axis="horizontal"
+            verticalSwipe="standard"
+            showIndicators={false}
+            interval={2000}
+            infiniteLoop={true}
+            showThumbs={false}
+            // Use a responsive number of slides to show
+            showArrows={true} // Optional: Add arrows for navigation
+          >
+            {/* Create slides dynamically based on the array */}
+            {arr.map((item, itemIndex) => (
+                  <div
+                    key={itemIndex}
+                    className="flex p-4 flex-col my-10 rounded-lg bg-white items-center w-full sm:w-1/2 md:w-1/3"
+                  >
+                    <div className="w-3/4 mb-4 flex justify-center">
+                      <img
+                        className="w-full h-auto object-cover"
+                        src={pfp} // Replace with item.image if images vary
+                        alt="Profile"
+                      />
+                    </div>
+                    <p className="text-xl px-4 text-center">
+                      {item.paragraph}
+                    </p>
+                    <p className="font-semibold text-[#D6B8FF]">
+                      {item.heading}
+                    </p>
+                  </div>
+            
+             
+            ))}
           </Carousel>
         </div>
+
+
       </div>
-      <div className="py-20">
+      <div className="py-10 md:py-20">
         <div className="">
           <h1 className="text-2xl text-center">
             Não deixe para amanhã, o que pode fazer{" "}

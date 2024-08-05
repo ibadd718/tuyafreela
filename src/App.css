@@ -25,3 +25,11 @@ body {
 .scrollable-content::-webkit-scrollbar-thumb:hover {
   background-color: #a66ff6;
 }
+.carousel .control-dots{
+  text-align: right;
+  z-index: 10;
+}
+.carousel .control-dots .dot{
+
+  background-color: black;
+}

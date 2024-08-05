@@ -22,7 +22,7 @@ import { Carousel } from "react-responsive-carousel";
 
 const Home = () => {
   const Card = ({ image, altText, heading }) => (
-    <div className="bg-[#F6F6F6] overflow-hidden text-center">
+    <div className="bg-[#F6F6F6] flex flex-col justify-center  overflow-hidden text-center">
       <img src={image} alt={altText} className="" />
       <h2 className="mt-4 mb-4 text-xl ">{heading}</h2>
     </div>
@@ -175,12 +175,12 @@ const Home = () => {
             </div>
           </div>
 
-          <h1 className="text-center text-2xl md:text-3xl lg:text-4xl mb-10 font-semibold mt-10 md:mt-10 lg:mt-52">
+          <h1 className="text-center text-2xl md:text-3xl lg:text-4xl mb-10 font-semibold mt-10 md:mt-20 lg:mt-52">
             Acompanhe nossos resultados!
           </h1>
 
           {/* Flex container for responsiveness */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col pb-10 pt-6  gap-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {/* Image Container */}
               <div className="flex flex-col items-center text-center">
@@ -253,7 +253,7 @@ const Home = () => {
             infiniteLoop="true"
             showThumbs="false"
           >
-            <div className="flex flex-col md:flex-row items-center">
+            <div className="flex flex-col md:flex-row items-center absolute">
               <div className="w-2/4 md:w-full mb-4 md:mb-0 flex justify-center">
                 <img
                   className="w-full h-auto object-cover"
@@ -335,7 +335,7 @@ const Home = () => {
               </span>
             </div>
           </h1>
-          <div className="w-[100%] mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 ">
+          <div className="w-[100%] gap-5 mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 ">
             {images.map((image, index) => (
               <Card
                 key={index}
