@@ -132,7 +132,6 @@ const Home = () => {
         >
           <div className="relative flex flex-col w-full md:mt-10 z-10">
             <div className="ml-0 md:ml-10 text-center md:text-left relative z-10">
-              {/* Hero2 Image Section (Tablets and Phones) */}
               <div className="relative right-1/4 z-0 block xl:hidden">
                 <img
                   src={Hero2}
@@ -148,7 +147,7 @@ const Home = () => {
                   <span className="font-bold">Torne-se um freelancer.</span>
                 </div>
               </h1>
-              <p className="mt-4 text-sm md:text-base md:w-2/5">
+              <p className="mt-4 mx-4 text-sm md:text-base md:w-2/5">
                 Você pode melhorar a sua presença na web, vender online, vender
                 nas redes sociais, criar conteúdos que mantenham seus clientes
                 interessados ​​na sua marca e muito mais!
@@ -211,7 +210,7 @@ const Home = () => {
                 <p className="text-gray-600 text-lg">Usuários Online</p>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8 justify-center">
+            <div className="flex mx-4 flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8 justify-center">
               <button className="bg-[#D6B8FF] text-xl font-semibold text-white p-5 rounded-sm transition-transform transform hover:scale-105 hover:bg-[#B09CFF]">
                 PUBLIQUE UM PROJETO
               </button>
@@ -262,7 +261,7 @@ const Home = () => {
                 />
               </div>
               <div className="p-5 md:p-10 ">
-                <p className="text-xl md:text-start w-[300px] md:w-full">
+                <p className="text-xl md:text-start w-[250px] md:w-full">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
