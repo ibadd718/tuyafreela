@@ -224,7 +224,7 @@ const Home = () => {
       <div className="">
         <div className="mt-5 lg:mt-40">
           <div className="flex justify-center">
-            <h1 className="text-4xl mt-10 mb-16  text-center">
+            <h1 className="text-4xl mx-2 mt-10 mb-16  text-center">
               Milhares de pessoas acreditam em nossos
               <div>
                 <span className="font-bold tracking-wide text-[#d6b8ff]">
@@ -248,20 +248,43 @@ const Home = () => {
             axis="horizontal"
             verticalSwipe="standard"
             showIndicators="false"
-            interval="2000"
+            interval={2000}
             infiniteLoop="true"
             showThumbs="false"
           >
             <div className="flex flex-col md:flex-row items-center absolute">
-              <div className="w-2/4 md:w-full mb-4 md:mb-0 flex justify-center">
+              <div className="w-2/4 md:w-1/4 mb-4 md:mb-0 flex justify-center">
                 <img
                   className="w-full h-auto object-cover"
                   src={pfp}
                   alt="Profile"
                 />
               </div>
-              <div className="p-5 md:p-10 ">
-                <p className="text-xl md:text-start w-[250px] md:w-full">
+              <div className="p-4 md:p-8 w-full md:w-4/5 ">
+                <p className="text-base md:text-xl">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged.
+                </p>
+                <div className="mt:4 md:mt-1 text-start font-semibold text-xl text-[#D6B8FF]">
+                  Eduardo Lopes - Realtech Produções
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col      md:flex-row items-center">
+              <div className="w-2/4 md:w-1/4 mb-4 md:mb-0 flex justify-center">
+                <img
+                  className="w-full h-auto object-cover"
+                  src={pfp}
+                  alt="Profile"
+                />
+              </div>
+              <div className="p-4 md:p-8 w-full md:w-4/5 ">
+              <p className="text-base md:text-xl">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
@@ -276,38 +299,15 @@ const Home = () => {
               </div>
             </div>
             <div className="flex flex-col md:flex-row items-center">
-              <div className="w-2/4 md:w-full mb-4 md:mb-0 flex justify-center">
+              <div className="w-2/4 md:w-1/4 mb-4 md:mb-0 flex justify-center">
                 <img
                   className="w-full h-auto object-cover"
                   src={pfp}
                   alt="Profile"
                 />
               </div>
-              <div className="p-5 md:p-10 ">
-                <p className="text-xl md:text-start w-[300px] md:w-full">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged.
-                </p>
-                <div className="mt:4 md:mt-1 text-start font-semibold text-xl text-[#D6B8FF]">
-                  Eduardo Lopes - Realtech Produções
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row items-center">
-              <div className="w-2/4 md:w-full mb-4 md:mb-0 flex justify-center">
-                <img
-                  className="w-full h-auto object-cover"
-                  src={pfp}
-                  alt="Profile"
-                />
-              </div>
-              <div className="p-5 md:p-10 ">
-                <p className="text-xl md:text-start w-[300px] md:w-full">
+              <div className="p-4 md:p-8 w-full md:w-4/5 ">
+              <p className="text-base md:text-xl">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
