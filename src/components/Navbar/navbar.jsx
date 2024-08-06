@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center py-2 px-4 lg:px-6">
         <div className="flex items-center space-x-6">
           <Link to={"/"}>
-            <img className="w-64" src={Logo} alt="Logo" />
+            <img className="ml-[-28px] md:ml-0 w-64" src={Logo} alt="Logo" />
           </Link>
           <div className="relative hidden lg:block">
             <input
@@ -137,20 +137,20 @@ const Navbar = () => {
               type="text"
             />
             <Link
-              to="/como"
-              className={`hover:text-[#D6B8FF] text-white ${isActive("/como") ? "text-[#D6B8FF]" : ""}`}
+              to="/functiona"
+              className={`hover:text-[#D6B8FF] text-white ${isActive("/functiona") ? "text-[#D6B8FF]" : ""}`}
             >
               Como Funciona?
             </Link>
             <Link
-              to="/cada"
-              className={`hover:text-[#D6B8FF] text-white ${isActive("/cada") ? "text-[#D6B8FF]" : ""}`}
+              to="/signup"
+              className={`hover:text-[#D6B8FF] text-white ${isActive("/signup") ? "text-[#D6B8FF]" : ""}`}
             >
               Cadastre-se
             </Link>
             <Link
-              to="/signup"
-              className={`hover:text-[#D6B8FF] text-white ${isActive("/entrar") ? "text-[#D6B8FF]" : ""}`}
+              to="/login"
+              className={`hover:text-[#D6B8FF] text-white ${isActive("/login") ? "text-[#D6B8FF]" : ""}`}
             >
               Entrar
             </Link>
@@ -162,7 +162,7 @@ const Navbar = () => {
               My Profile <RiArrowDropDownLine size={30} />
             </button>
             {dropdownOpen && (
-              <ul className="mt-2 bg-base-100 rounded-box text-black w-full p-2 shadow">
+              <ul className="mt-2 bg-base-100  rounded-box text-black w-full p-2 shadow">
                 <li className="mb-2">
                   <Link
                     className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/login") ? "text-[#D6B8FF]"  : ""}`}

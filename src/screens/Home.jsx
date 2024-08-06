@@ -280,7 +280,6 @@ const Home = () => {
               <div className="w-2/4 md:w-full mb-4 md:mb-0 flex justify-center">
                 <img
                   className="w-full h-auto object-cover"
-                  
                   src={pfp}
                   alt="Profile"
                 />
