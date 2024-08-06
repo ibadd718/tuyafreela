@@ -116,25 +116,7 @@ const Functiona = () => {
       heading: "Eduardo Lopes - Realtech Produções"
     },
   ]
-  const Card = ({ image, altText, heading }) => (
-    <div className=" overflow-hidden text-center flex flex-col items-center justify-center">
-      <img src={image} alt={altText} className="w-44 h-44 object-fit" />
-      <h2 className="mt-4 mb-4 text-xl">{heading}</h2>
-    </div>
-  );
 
-  const images = [
-    { src: moreMin, alt: "Grupo 123", heading: "Renove seu site" },
-    { src: seoAndWebMin, alt: "Grupo 124", heading: "Lance seu App Mobile" },
-    {
-      src: quickMobileOptionsMin,
-      alt: "Grupo 125",
-      heading: "Crie sua Id. Visual",
-    },
-    { src: vectorMin, alt: "Grupo 122", heading: "Tradutores/Escritores" },
-    { src: newsMin, alt: "Grupo 139", heading: "Marketing e Vendas" },
-    { src: aimMin, alt: "Grupo 126", heading: "E muito mais!" },
-  ];
   return (
     <div className="relative w-full bg-white h-auto">
       <div className="relative w-full h-72 md:h-[600px] overflow-hidden bg-gradient-to-r from-[#532073] to-[#aa5dcd]">
@@ -371,7 +353,7 @@ const Functiona = () => {
             interval={2000}
             infiniteLoop={true}
             showThumbs={false}
-            showArrows={true} 
+            showArrows={true}
           >
             {arr.map((item, itemIndex) => (
               <div
@@ -381,7 +363,7 @@ const Functiona = () => {
                 <div className="w-3/4 mb-4 flex justify-center">
                   <img
                     className="w-full h-auto object-cover"
-                    src={pfp} 
+                    src={pfp}
                     alt="Profile"
                   />
                 </div>
@@ -398,7 +380,7 @@ const Functiona = () => {
 
 
       </div>
-      <div className="py-10 md:py-20">
+      <div className="py-10 relative md:py-20">
         <div className="">
           <h1 className="text-2xl text-center">
             Não deixe para amanhã, o que pode fazer{" "}
@@ -408,18 +390,56 @@ const Functiona = () => {
             Coloque suas ideias em prática
           </h1>
         </div>
-        <div className="flex justify-center mt-10 mb-20 md:mt-20">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-28">
-            {images.map((image, index) => (
-              <Card
-                key={index}
-                image={image.src}
-                altText={image.alt}
-                heading={image.heading}
-              />
-            ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10 mb-20">
+          <div className="overflow-hidden text-center flex flex-col items-center justify-center p-4">
+            <img src={seoAndWebMin} alt="Grupo 124" className="w-54 h-44 object-cover" />
+            <h2 className="mt-4 mb-4 text-xl font-semibold">Lance seu App Mobile</h2>
+          </div>
+
+          
+          <div className="overflow-hidden text-center hidden xl:block absolute left-[23%] top-72 flex flex-col items-center justify-center p-4">
+            <img src={curve4} alt="Curva 4" className=" object-cover" />
+          </div>
+
+          <div className="overflow-hidden text-center flex flex-col items-center justify-center p-4">
+            <img src={quickMobileOptionsMin} alt="Grupo 125" className="w-32 h-44 object-cover" />
+            <h2 className="mt-4 mb-4 text-xl font-semibold">Crie sua Id. Visual</h2>
+          </div>
+
+          <div className="overflow-hidden text-center hidden xl:block absolute right-[25%] top-52 flex flex-col items-center justify-center p-4">
+            <img src={curve3} alt="Curva 4" className=" object-cover" />
+          </div>
+
+          <div className="overflow-hidden text-center flex flex-col items-center justify-center p-4">
+            <img src={vectorMin} alt="Grupo 122" className="w-52 h-44 object-fit" />
+            <h2 className="mt-4 mb-4 text-xl font-semibold">Tradutores/Escritores</h2>
+          </div>
+
+          <div className="overflow-hidden text-center flex flex-col items-center justify-center p-4">
+            <img src={newsMin} alt="Grupo 139" className="w-58 h-44 object-cover" />
+            <h2 className="mt-4 mb-4 text-xl font-semibold">Marketing e Vendas</h2>
+          </div>
+
+          <div className="overflow-hidden text-center hidden xl:block absolute left-[23%] bottom-60 flex flex-col items-center justify-center p-4">
+            <img src={curve4} alt="Curva 4" className=" object-cover" />
+          </div>
+
+
+          <div className="overflow-hidden text-center flex flex-col items-center justify-center p-4">
+            <img src={aimMin} alt="Grupo 126" className="w-44 h-44 object-cover" />
+            <h2 className="mt-4 mb-4 text-xl font-semibold">E muito mais!</h2>
+          </div>
+          <div className="overflow-hidden text-center hidden xl:block absolute right-[24%] bottom-80 flex flex-col items-center justify-center p-4">
+            <img src={curve3} alt="Curva 4" className=" object-cover" />
+          </div>
+
+
+          <div className="overflow-hidden text-center flex flex-col items-center justify-center p-4">
+            <img src={moreMin} alt="Grupo 123" className="w-44 h-44 object-cover" />
+            <h2 className="mt-4 mb-4 text-xl font-semibold">Renove seu site</h2>
           </div>
         </div>
+
       </div>
     </div>
   );

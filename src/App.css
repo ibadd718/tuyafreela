@@ -11,7 +11,6 @@ body {
   /* Ensure it scrolls when content overflows */
   padding: 10px;
 }
-
 .scrollable-content::-webkit-scrollbar {
   width: 12px;
 }
