@@ -162,7 +162,7 @@ const Navbar = () => {
               My Profile <RiArrowDropDownLine size={30} />
             </button>
             {dropdownOpen && (
-              <ul className="mt-2 rounded-box text-black w-full p-2 shadow">
+              <ul className="mt-2 bg-white rounded-box text-black w-full p-2 shadow">
                 <li className="mb-2">
                   <Link
                     className={`block ml-2 hover:text-[#D6B8FF] ${isActive("/login") ? "text-[#D6B8FF]"  : ""}`}
