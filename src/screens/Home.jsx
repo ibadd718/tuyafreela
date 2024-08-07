@@ -56,10 +56,8 @@ const Home = () => {
       </h1>
 
       <div className="container mx-auto px-4 mt-8 md:mt-16">
-        {/* Flex container for responsiveness */}{" "}
         <div className="flex flex-col gap-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            {/* Image Container */}
             <div className="flex flex-col items-center">
               <img
                 src={ComoPic1}
@@ -128,7 +126,7 @@ const Home = () => {
       <div className="bg-white">
         <div
           id="third-container"
-          className="w-full bg-white py-2 mx-auto  relative z-20 lg:top-40 sm:top-10 mt-10"
+          className="w-full bg-white py-2 mx-auto  relative z-20  sm:top-10 mt-10"
         >
           <div className="relative flex flex-col w-full md:mt-10 z-10">
             <div className="ml-0 md:ml-10 text-center md:text-left relative z-10">
@@ -147,7 +145,7 @@ const Home = () => {
                   <span className="font-bold">Torne-se um freelancer.</span>
                 </div>
               </h1>
-              <p className="mt-4 mx-4 text-sm md:text-base md:w-2/5">
+              <p className="mt-4  text-sm md:text-base md:w-2/5">
                 Você pode melhorar a sua presença na web, vender online, vender
                 nas redes sociais, criar conteúdos que mantenham seus clientes
                 interessados ​​na sua marca e muito mais!
@@ -156,8 +154,6 @@ const Home = () => {
                 COMEÇE SUA JORNADA!
               </button>
             </div>
-
-            {/* Hero2 Image Section (Desktop) */}
             <div
               id="hero-div"
               className="absolute right-0 top-1/2 transform -translate-y-1/2 hidden xl:block z-0"
@@ -169,7 +165,7 @@ const Home = () => {
                   src={Hero2}
                   alt="Hero Image"
                 />
-                <div className="absolute inset-0 w-full bg-gradient-to-l from-transparent to-white w-[120%]"></div>
+                <div id="heroImage-div" className=""></div>
               </div>
             </div>
           </div>
@@ -284,7 +280,7 @@ const Home = () => {
                 />
               </div>
               <div className="p-4 md:p-8 w-full md:w-4/5 ">
-              <p className="text-base md:text-xl">
+                <p className="text-base md:text-xl">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
@@ -307,7 +303,7 @@ const Home = () => {
                 />
               </div>
               <div className="p-4 md:p-8 w-full md:w-4/5 ">
-              <p className="text-base md:text-xl">
+                <p className="text-base md:text-xl">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
