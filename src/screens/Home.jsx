@@ -167,7 +167,7 @@ const Home = () => {
                 />
                 <div
                   id="heroImage-div"
-                  className="absolute inset-0  bg-gradient-to-l from-transparent to-white w-[100%]"
+                  className="absolute inset-0 ml-[46%] top-0 mt-0 bg-gradient-to-l from-transparent to-white w-[40%]"
                 ></div>
               </div>
             </div>
