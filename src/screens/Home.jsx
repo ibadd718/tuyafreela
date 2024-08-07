@@ -165,7 +165,10 @@ const Home = () => {
                   src={Hero2}
                   alt="Hero Image"
                 />
-                <div id="heroImage-div" className=""></div>
+                <div
+                  id="heroImage-div"
+                  className="absolute inset-0  bg-gradient-to-l from-transparent to-white w-[100%]"
+                ></div>
               </div>
             </div>
           </div>

@@ -72,9 +72,3 @@ body {
   background: linear-gradient(to left, rgba(255, 255, 255, 0.06), white);
   width: 100%;
 } */
-
-#heroImage-div {
-  -webkit-box-shadow: inset 10px 26px 251px 17px rgba(255, 255, 255, 1);
-  -moz-box-shadow: inset 10px 26px 251px 17px rgba(255, 255, 255, 1);
-  box-shadow: inset 10px 26px 251px 17px rgba(255, 255, 255, 1);
-}
