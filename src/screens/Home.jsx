@@ -44,11 +44,19 @@ const Home = () => {
         <img src={Hero} className="object-cover w-full h-auto" alt="" />
 
         {/* Overlay */}
-        <div className="absolute inset-0 w-2/4 bg-black bg-opacity-50 z-10 flex items-center justify-center px-4 md:px-8">
-          <h1 className="text-white text-xl md:text-2xl lg:text-5xl xl:text-6xl tracking-wide text-left md:text-left p-4">
+        <div className="absolute inset-0 w-2/4  bg-black bg-opacity-50 z-10 flex flex-col justify-center px-4 md:px-8">
+          <h1 className="text-white   md:w-full text-lg md:text-4xl lg:text-5xl xl:text-6xl tracking-wide text-left md:text-left p-4 py-1 md:py-10">
             Contrate freelancers <strong>especializados para qualquer</strong>{" "}
             trabalho, online.
           </h1>
+          <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 ml-4 lg:space-x-4">
+            <button className="bg-[#D6B8FF] text-xs md:text-sm lg:text-xl font-semibold text-white p-1 md:p-4 rounded-sm transition-transform transform hover:scale-105 hover:bg-[#B09CFF]">
+              Quero Contrator
+            </button>
+            <button className="bg-[#363636] text-xs md:text-sm lg:text-xl font-semibold text-white p-1 md:p-4 rounded-sm transition-transform transform hover:scale-105 hover:bg-[#5a6a75]">
+              TRABALHE COMO FREELA
+            </button>
+          </div>
         </div>
       </div>
       <h1 className="text-center text-3xl md:text-4xl font-semibold mt-12 md:mt-16 px-4">
@@ -147,7 +155,7 @@ const Home = () => {
                   <span className="font-bold">Torne-se um freelancer.</span>
                 </div>
               </h1>
-              <p className="mt-4 mx-4 text-sm md:text-base md:w-2/5">
+              <p className="mt-4 mx-4 md:mx-0 text-sm md:text-base md:w-2/5">
                 Você pode melhorar a sua presença na web, vender online, vender
                 nas redes sociais, criar conteúdos que mantenham seus clientes
                 interessados ​​na sua marca e muito mais!
